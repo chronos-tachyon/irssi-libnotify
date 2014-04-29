@@ -17,16 +17,17 @@ Installing
 
 These instructions are for Ubuntu and other Debian derivatives.
 
-  # Prerequisite: must have irssi and libnotify-bin
-  sudo apt-get install irssi libnotify-bin
+    # Prerequisite: must have irssi and libnotify-bin
+    sudo apt-get install irssi libnotify-bin
 
-  # Install the script where irssi can find it
-  mkdir -p ~/.irssi/scripts/autorun
-  cp -t ~/.irssi/scripts libnotify.pl
+    # Install the script where irssi can find it
+    mkdir -p ~/.irssi/scripts/autorun
+    cp -t ~/.irssi/scripts libnotify.pl
 
-  # OPTIONAL: Load the script automatically on startup.  If you don't do this,
-  # you'll need to run "/SCRIPT LOAD libnotify" by hand each time you restart.
-  ln -st ~/.irssi/scripts/autorun ../libnotify.pl
+    # OPTIONAL: Load the script automatically on startup.  If you don't do
+    # this, you'll need to run "/SCRIPT LOAD libnotify" by hand each time you
+    # restart your irssi client.
+    ln -st ~/.irssi/scripts/autorun ../libnotify.pl
 
 See Also
 --------
