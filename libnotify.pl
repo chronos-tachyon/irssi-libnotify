@@ -12,12 +12,17 @@ our %IRSSI = (
   description => 'Uses notify-send(1) to alert you when someone is talking to you.',
   url         => 'https://github.com/chronos-tachyon/irssi-libnotify',
   license     => 'GNU General Public License',
-  changed     => '2014-04-29 15:29-07:00',
+  changed     => '2014-04-29 15:46-07:00',
 );
 
 sub notify ($$) {
   my($target, $msg) = @_;
-  my @argv = ('notify-send', '-c', 'im.received', "${target}: ${msg}");
+  my @argv = (
+    'notify-send',
+    '--icon=user-available',
+    '--category=im.received',
+    "${target}: ${msg}",
+  );
   system(@argv);
 }
 
